@@ -10,9 +10,8 @@ from aiogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton
 )
-import os
 
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = "8659283471:AAESk2nptd8f6ftX5KL5b9qLDgkW5kP6drM"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -24,118 +23,118 @@ admin_reply_state = {}
 
 
 # =========================
-# ?? ÌÅÍÞ
+# 📋 МЕНЮ
 # =========================
 main_menu = ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text="?? Çàêàçàòü ðåìîíò")],
-        [KeyboardButton(text="?? Ïðàéñ")],
-        [KeyboardButton(text="????? Íàøè óñëóãè")],
-        [KeyboardButton(text="?? Âûåçä ìàñòåðà")],
-        [KeyboardButton(text="?? Ïîääåðæêà")]
+        [KeyboardButton(text="📞 Заказать ремонт")],
+        [KeyboardButton(text="💰 Прайс")],
+        [KeyboardButton(text="🧑‍🔧 Наши услуги")],
+        [KeyboardButton(text="📍 Выезд мастера")],
+        [KeyboardButton(text="💬 Поддержка")]
     ],
     resize_keyboard=True
 )
 
 
 # =========================
-# ?? START
+# 🚀 START
 # =========================
 @dp.message(CommandStart())
 async def start(message: Message):
     user_state.pop(message.from_user.id, None)
 
     await message.answer(
-        "?? Äîáðî ïîæàëîâàòü â AIRFIX!",
+        "👋 Добро пожаловать в AIRFIX!",
         reply_markup=main_menu
     )
 
 
 # =========================
-# ?? ÏÐÀÉÑ (ÏÎËÍÛÉ ÒÂÎÉ)
+# 💰 ПРАЙС (ПОЛНЫЙ ТВОЙ)
 # =========================
-@dp.message(F.text == "?? Ïðàéñ")
+@dp.message(F.text == "💰 Прайс")
 async def price(message: Message):
 
     await message.answer("""
-?? ÏÐÀÉÑ AIRFIX
+💰 ПРАЙС AIRFIX
 
-?? Òðóáà ìåäíàÿ äèàìåòð 6/9/12 — 17$ / ìåòð
-?? Òðóáà ìåäíàÿ äèàìåòð 16/18 — 23$ / ìåòð
+🔹 Труба медная диаметр 6/9/12 — 17$ / метр
+🔹 Труба медная диаметр 16/18 — 23$ / метр
 
-?? Îòâåðñòèå:
-• êèðïè÷ — 100 000 ñóì
-• áåòîí — 150 000 ñóì
+🔹 Отверстие:
+• кирпич — 100 000 сум
+• бетон — 150 000 сум
 
-?? Îòâåðñòèå ïîä äðåíàæ — 30 000 ñóì
+🔹 Отверстие под дренаж — 30 000 сум
 
-?? Øòðîáà:
-• êèðïè÷ — 100 000 ñóì / ì
-• áåòîí — 130 000 ñóì / ì
-• ïîä äðåíàæ — 50 000 ñóì / ì
+🔹 Штроба:
+• кирпич — 100 000 сум / м
+• бетон — 130 000 сум / м
+• под дренаж — 50 000 сум / м
 
-?? Ïðîêëàäêà òðóáû — 5$ / ì
-?? Ñâàðî÷íûé ñòûê — 40 000 ñóì
+🔹 Прокладка трубы — 5$ / м
+🔹 Сварочный стык — 40 000 сум
 
-?? Ôðåîí:
-• R410 / R32 — 60 000 / 100ãð
-• R22 — 80 000 / 100ãð
+🔹 Фреон:
+• R410 / R32 — 60 000 / 100гр
+• R22 — 80 000 / 100гр
 
-?? Ïðîôèëàêòèêà — 300 000 ñóì
+🔹 Профилактика — 300 000 сум
 
-?? Óñòàíîâêà:
-• 9/12 — 550 000 ñóì
-• 18 — 650 000 ñóì
-• 24 — 750 000 ñóì
-• êîëîííûé — 120$
+🔹 Установка:
+• 9/12 — 550 000 сум
+• 18 — 650 000 сум
+• 24 — 750 000 сум
+• колонный — 120$
 
-?? Ðåìîíò — ïî ôàêòó íåèñïðàâíîñòè
+🔹 Ремонт — по факту неисправности
 """)
 
 
 # =========================
-# ????? ÓÑËÓÃÈ
+# 🧑‍🔧 УСЛУГИ
 # =========================
-@dp.message(F.text == "????? Íàøè óñëóãè")
+@dp.message(F.text == "🧑‍🔧 Наши услуги")
 async def services(message: Message):
 
     await message.answer("""
-?? ÓÑÒÀÍÎÂÊÀ ÊÎÍÄÈÖÈÎÍÅÐÎÂ
-?? ÐÅÌÎÍÒ ËÞÁÎÉ ÑËÎÆÍÎÑÒÈ
-?? ÏÐÎÔÅÑÑÈÎÍÀËÜÍÀß ×ÈÑÒÊÀ
-?? ÇÀÏÐÀÂÊÀ ÔÐÅÎÍÎÌ
-?? ÄÈÀÃÍÎÑÒÈÊÀ ÍÅÈÑÏÐÀÂÍÎÑÒÅÉ
-?? ÄÅÌÎÍÒÀÆ È ÏÅÐÅÍÎÑ
-?? ÎÁÑËÓÆÈÂÀÍÈÅ ÊÂÀÐÒÈÐ È ÎÔÈÑÎÂ
-?? ÁÛÑÒÐÛÉ ÂÛÅÇÄ ÏÎ ÒÀØÊÅÍÒÓ
+❄️ УСТАНОВКА КОНДИЦИОНЕРОВ
+🔧 РЕМОНТ ЛЮБОЙ СЛОЖНОСТИ
+🧼 ПРОФЕССИОНАЛЬНАЯ ЧИСТКА
+🧊 ЗАПРАВКА ФРЕОНОМ
+⚙️ ДИАГНОСТИКА НЕИСПРАВНОСТЕЙ
+🛠 ДЕМОНТАЖ И ПЕРЕНОС
+🏢 ОБСЛУЖИВАНИЕ КВАРТИР И ОФИСОВ
+🚗 БЫСТРЫЙ ВЫЕЗД ПО ТАШКЕНТУ
 """)
 
 
 # =========================
-# ?? ÂÛÅÇÄ ÌÀÑÒÅÐÀ
+# 📍 ВЫЕЗД МАСТЕРА
 # =========================
-@dp.message(F.text == "?? Âûåçä ìàñòåðà")
+@dp.message(F.text == "📍 Выезд мастера")
 async def master_visit(message: Message):
 
     user_state[message.from_user.id] = "waiting_contact"
 
     kb = ReplyKeyboardMarkup(
         keyboard=[
-            [KeyboardButton(text="?? Îòïðàâèòü íîìåð", request_contact=True)],
-            [KeyboardButton(text="?? Îòïðàâèòü ãåîëîêàöèþ", request_location=True)],
-            [KeyboardButton(text="?? Â ìåíþ")]
+            [KeyboardButton(text="📱 Отправить номер", request_contact=True)],
+            [KeyboardButton(text="📍 Отправить геолокацию", request_location=True)],
+            [KeyboardButton(text="🏠 В меню")]
         ],
         resize_keyboard=True
     )
 
     await message.answer(
-        "?? ÂÛÅÇÄ ÌÀÑÒÅÐÀ\n\nÑíà÷àëà îòïðàâüòå íîìåð > ïîòîì ãåîëîêàöèþ",
+        "📍 ВЫЕЗД МАСТЕРА\n\nСначала отправьте номер → потом геолокацию",
         reply_markup=kb
     )
 
 
 # =========================
-# ?? ÊÎÍÒÀÊÒ
+# 📞 КОНТАКТ
 # =========================
 @dp.message(F.contact)
 async def contact(message: Message):
@@ -150,21 +149,21 @@ async def contact(message: Message):
     await bot.send_message(
         ADMIN_ID,
         f"""
-?? ÍÎÂÀß ÇÀßÂÊÀ
+📞 НОВАЯ ЗАЯВКА
 
-?? {message.from_user.full_name}
-?? {message.contact.phone_number}
+👤 {message.from_user.full_name}
+📱 {message.contact.phone_number}
 """
     )
 
     await message.answer(
-        "? Íîìåð ïðèíÿò!\nÒåïåðü îòïðàâüòå ãåîëîêàöèþ ??",
+        "✅ Номер принят!\nТеперь отправьте геолокацию 📍",
         reply_markup=ReplyKeyboardRemove()
     )
 
 
 # =========================
-# ?? ÃÅÎËÎÊÀÖÈß
+# 📍 ГЕОЛОКАЦИЯ
 # =========================
 @dp.message(F.location)
 async def location(message: Message):
@@ -181,56 +180,56 @@ async def location(message: Message):
     await bot.send_message(
         ADMIN_ID,
         f"""
-?? ÃÅÎËÎÊÀÖÈß
+📍 ГЕОЛОКАЦИЯ
 
-?? {message.from_user.full_name}
-?? {loc.latitude}, {loc.longitude}
+👤 {message.from_user.full_name}
+🌍 {loc.latitude}, {loc.longitude}
 
 https://www.google.com/maps?q={loc.latitude},{loc.longitude}
 """
     )
 
     await message.answer(
-        "? Çàÿâêà îòïðàâëåíà!",
+        "✅ Заявка отправлена!",
         reply_markup=main_menu
     )
 
 
 # =========================
-# ?? ÇÀÊÀÇ ÐÅÌÎÍÒÀ (ÏÐÎÁËÅÌÛ)
+# 📞 ЗАКАЗ РЕМОНТА (ПРОБЛЕМЫ)
 # =========================
-@dp.message(F.text == "?? Çàêàçàòü ðåìîíò")
+@dp.message(F.text == "📞 Заказать ремонт")
 async def order(message: Message):
 
     user_state[message.from_user.id] = "waiting_problem"
 
     await message.answer("""
-?? ÎÏÈØÈÒÅ ÏÐÎÁËÅÌÓ:
+📞 ОПИШИТЕ ПРОБЛЕМУ:
 
-?? Íå õîëîäèò
-?? Øóìèò
-?? Òå÷¸ò âîäà
-?? Íå âêëþ÷àåòñÿ
-?? Âûáèâàåò àâòîìàò
-?? Ñëàáûé ïîòîê âîçäóõà
+❄️ Не холодит
+🔊 Шумит
+💧 Течёт вода
+⚠️ Не включается
+🔌 Выбивает автомат
+🧊 Слабый поток воздуха
 
-?? Èëè îïèøèòå ñâîèìè ñëîâàìè
+✍️ Или опишите своими словами
 """)
 
 
 # =========================
-# ?? ÏÎÄÄÅÐÆÊÀ
+# 💬 ПОДДЕРЖКА
 # =========================
-@dp.message(F.text == "?? Ïîääåðæêà")
+@dp.message(F.text == "💬 Поддержка")
 async def support(message: Message):
 
     user_state[message.from_user.id] = "support"
 
-    await message.answer("?? Íàïèøèòå âàø âîïðîñ:")
+    await message.answer("💬 Напишите ваш вопрос:")
 
 
 # =========================
-# ?? ÃËÀÂÍÛÉ ÐÎÓÒÅÐ
+# 🧠 ГЛАВНЫЙ РОУТЕР
 # =========================
 @dp.message()
 async def router(message: Message):
@@ -239,7 +238,7 @@ async def router(message: Message):
     state = user_state.get(uid)
 
     # -------------------------
-    # ÀÄÌÈÍ ÎÒÂÅÒ
+    # АДМИН ОТВЕТ
     # -------------------------
     if uid == ADMIN_ID:
 
@@ -248,16 +247,16 @@ async def router(message: Message):
         if target:
             await bot.send_message(
                 target,
-                f"?? Îòâåò ìàñòåðà:\n\n{message.text}"
+                f"💬 Ответ мастера:\n\n{message.text}"
             )
-            await message.answer("? Îòâåò îòïðàâëåí êëèåíòó")
+            await message.answer("✅ Ответ отправлен клиенту")
         else:
-            await message.answer("? Ñíà÷àëà íàæìè «Îòâåòèòü»")
+            await message.answer("❗ Сначала нажми «Ответить»")
         return
 
 
     # -------------------------
-    # ÐÅÌÎÍÒ
+    # РЕМОНТ
     # -------------------------
     if state == "waiting_problem":
 
@@ -266,19 +265,19 @@ async def router(message: Message):
         await bot.send_message(
             ADMIN_ID,
             f"""
-?? ÐÅÌÎÍÒ
+🚨 РЕМОНТ
 
-?? {message.from_user.full_name}
-?? {message.text}
+👤 {message.from_user.full_name}
+📝 {message.text}
 """
         )
 
-        await message.answer("? Çàÿâêà îòïðàâëåíà", reply_markup=main_menu)
+        await message.answer("✅ Заявка отправлена", reply_markup=main_menu)
         return
 
 
     # -------------------------
-    # ÏÎÄÄÅÐÆÊÀ
+    # ПОДДЕРЖКА
     # -------------------------
     if state == "support":
 
@@ -287,18 +286,18 @@ async def router(message: Message):
         sent = await bot.send_message(
             ADMIN_ID,
             f"""
-?? ÏÎÄÄÅÐÆÊÀ
+💬 ПОДДЕРЖКА
 
-?? {message.from_user.full_name}
-?? {uid}
+👤 {message.from_user.full_name}
+🆔 {uid}
 
-? {message.text}
+❓ {message.text}
 """
         )
 
         kb = InlineKeyboardMarkup(
             inline_keyboard=[
-                [InlineKeyboardButton(text="?? Îòâåòèòü", callback_data=f"reply_{uid}")]
+                [InlineKeyboardButton(text="💬 Ответить", callback_data=f"reply_{uid}")]
             ]
         )
 
@@ -308,21 +307,21 @@ async def router(message: Message):
             reply_markup=kb
         )
 
-        await message.answer("? Îòïðàâëåíî â ïîääåðæêó", reply_markup=main_menu)
+        await message.answer("✅ Отправлено в поддержку", reply_markup=main_menu)
         return
 
 
     # -------------------------
-    # ÌÅÍÞ
+    # МЕНЮ
     # -------------------------
-    if message.text == "?? Â ìåíþ":
+    if message.text == "🏠 В меню":
         user_state.pop(uid, None)
-        await message.answer("?? Ãëàâíîå ìåíþ", reply_markup=main_menu)
+        await message.answer("🏠 Главное меню", reply_markup=main_menu)
         return
 
 
 # =========================
-# ?? ÊÍÎÏÊÀ ÎÒÂÅÒÈÒÜ
+# 💬 КНОПКА ОТВЕТИТЬ
 # =========================
 @dp.callback_query(F.data.startswith("reply_"))
 async def reply(call: CallbackQuery):
@@ -331,12 +330,12 @@ async def reply(call: CallbackQuery):
 
     admin_reply_state[call.from_user.id] = uid
 
-    await call.message.answer("?? Íàïèøèòå îòâåò êëèåíòó")
+    await call.message.answer("✍️ Напишите ответ клиенту")
     await call.answer()
 
 
 # =========================
-# ?? ÇÀÏÓÑÊ
+# ▶️ ЗАПУСК
 # =========================
 async def main():
     print("Bot started...")
