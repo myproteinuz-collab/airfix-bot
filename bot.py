@@ -11,7 +11,8 @@ from aiogram.types import (
     InlineKeyboardButton
 )
 import os
-TOKEN = os.getenv ("8659283471:AAESk2nptd8f6ftX5KL5b9qLDgkW5kP6drM")
+
+TOKEN = os.getenv("BOT_TOKEN")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
