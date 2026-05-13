@@ -24,15 +24,15 @@ admin_reply_state = {}
 
 
 # =========================
-# ?? ÌÅÍŞ
+# ?? ÃŒÃ…ÃÃ
 # =========================
 main_menu = ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text="?? Çàêàçàòü ğåìîíò")],
-        [KeyboardButton(text="?? Ïğàéñ")],
-        [KeyboardButton(text="????? Íàøè óñëóãè")],
-        [KeyboardButton(text="?? Âûåçä ìàñòåğà")],
-        [KeyboardButton(text="?? Ïîääåğæêà")]
+        [KeyboardButton(text="?? Ã‡Ã ÃªÃ Ã§Ã Ã²Ã¼ Ã°Ã¥Ã¬Ã®Ã­Ã²")],
+        [KeyboardButton(text="?? ÃÃ°Ã Ã©Ã±")],
+        [KeyboardButton(text="????? ÃÃ Ã¸Ã¨ Ã³Ã±Ã«Ã³Ã£Ã¨")],
+        [KeyboardButton(text="?? Ã‚Ã»Ã¥Ã§Ã¤ Ã¬Ã Ã±Ã²Ã¥Ã°Ã ")],
+        [KeyboardButton(text="?? ÃÃ®Ã¤Ã¤Ã¥Ã°Ã¦ÃªÃ ")]
     ],
     resize_keyboard=True
 )
@@ -46,96 +46,96 @@ async def start(message: Message):
     user_state.pop(message.from_user.id, None)
 
     await message.answer(
-        "?? Äîáğî ïîæàëîâàòü â AIRFIX!",
+        "?? Ã„Ã®Ã¡Ã°Ã® Ã¯Ã®Ã¦Ã Ã«Ã®Ã¢Ã Ã²Ã¼ Ã¢ AIRFIX!",
         reply_markup=main_menu
     )
 
 
 # =========================
-# ?? ÏĞÀÉÑ (ÏÎËÍÛÉ ÒÂÎÉ)
+# ?? ÃÃÃ€Ã‰Ã‘ (ÃÃÃ‹ÃÃ›Ã‰ Ã’Ã‚ÃÃ‰)
 # =========================
-@dp.message(F.text == "?? Ïğàéñ")
+@dp.message(F.text == "?? ÃÃ°Ã Ã©Ã±")
 async def price(message: Message):
 
     await message.answer("""
-?? ÏĞÀÉÑ AIRFIX
+?? ÃÃÃ€Ã‰Ã‘ AIRFIX
 
-?? Òğóáà ìåäíàÿ äèàìåòğ 6/9/12 — 17$ / ìåòğ
-?? Òğóáà ìåäíàÿ äèàìåòğ 16/18 — 23$ / ìåòğ
+?? Ã’Ã°Ã³Ã¡Ã  Ã¬Ã¥Ã¤Ã­Ã Ã¿ Ã¤Ã¨Ã Ã¬Ã¥Ã²Ã° 6/9/12 â€” 17$ / Ã¬Ã¥Ã²Ã°
+?? Ã’Ã°Ã³Ã¡Ã  Ã¬Ã¥Ã¤Ã­Ã Ã¿ Ã¤Ã¨Ã Ã¬Ã¥Ã²Ã° 16/18 â€” 23$ / Ã¬Ã¥Ã²Ã°
 
-?? Îòâåğñòèå:
-• êèğïè÷ — 100 000 ñóì
-• áåòîí — 150 000 ñóì
+?? ÃÃ²Ã¢Ã¥Ã°Ã±Ã²Ã¨Ã¥:
+â€¢ ÃªÃ¨Ã°Ã¯Ã¨Ã· â€” 100 000 Ã±Ã³Ã¬
+â€¢ Ã¡Ã¥Ã²Ã®Ã­ â€” 150 000 Ã±Ã³Ã¬
 
-?? Îòâåğñòèå ïîä äğåíàæ — 30 000 ñóì
+?? ÃÃ²Ã¢Ã¥Ã°Ã±Ã²Ã¨Ã¥ Ã¯Ã®Ã¤ Ã¤Ã°Ã¥Ã­Ã Ã¦ â€” 30 000 Ã±Ã³Ã¬
 
-?? Øòğîáà:
-• êèğïè÷ — 100 000 ñóì / ì
-• áåòîí — 130 000 ñóì / ì
-• ïîä äğåíàæ — 50 000 ñóì / ì
+?? Ã˜Ã²Ã°Ã®Ã¡Ã :
+â€¢ ÃªÃ¨Ã°Ã¯Ã¨Ã· â€” 100 000 Ã±Ã³Ã¬ / Ã¬
+â€¢ Ã¡Ã¥Ã²Ã®Ã­ â€” 130 000 Ã±Ã³Ã¬ / Ã¬
+â€¢ Ã¯Ã®Ã¤ Ã¤Ã°Ã¥Ã­Ã Ã¦ â€” 50 000 Ã±Ã³Ã¬ / Ã¬
 
-?? Ïğîêëàäêà òğóáû — 5$ / ì
-?? Ñâàğî÷íûé ñòûê — 40 000 ñóì
+?? ÃÃ°Ã®ÃªÃ«Ã Ã¤ÃªÃ  Ã²Ã°Ã³Ã¡Ã» â€” 5$ / Ã¬
+?? Ã‘Ã¢Ã Ã°Ã®Ã·Ã­Ã»Ã© Ã±Ã²Ã»Ãª â€” 40 000 Ã±Ã³Ã¬
 
-?? Ôğåîí:
-• R410 / R32 — 60 000 / 100ãğ
-• R22 — 80 000 / 100ãğ
+?? Ã”Ã°Ã¥Ã®Ã­:
+â€¢ R410 / R32 â€” 60 000 / 100Ã£Ã°
+â€¢ R22 â€” 80 000 / 100Ã£Ã°
 
-?? Ïğîôèëàêòèêà — 300 000 ñóì
+?? ÃÃ°Ã®Ã´Ã¨Ã«Ã ÃªÃ²Ã¨ÃªÃ  â€” 300 000 Ã±Ã³Ã¬
 
-?? Óñòàíîâêà:
-• 9/12 — 550 000 ñóì
-• 18 — 650 000 ñóì
-• 24 — 750 000 ñóì
-• êîëîííûé — 120$
+?? Ã“Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ :
+â€¢ 9/12 â€” 550 000 Ã±Ã³Ã¬
+â€¢ 18 â€” 650 000 Ã±Ã³Ã¬
+â€¢ 24 â€” 750 000 Ã±Ã³Ã¬
+â€¢ ÃªÃ®Ã«Ã®Ã­Ã­Ã»Ã© â€” 120$
 
-?? Ğåìîíò — ïî ôàêòó íåèñïğàâíîñòè
+?? ÃÃ¥Ã¬Ã®Ã­Ã² â€” Ã¯Ã® Ã´Ã ÃªÃ²Ã³ Ã­Ã¥Ã¨Ã±Ã¯Ã°Ã Ã¢Ã­Ã®Ã±Ã²Ã¨
 """)
 
 
 # =========================
-# ????? ÓÑËÓÃÈ
+# ????? Ã“Ã‘Ã‹Ã“ÃƒÃˆ
 # =========================
-@dp.message(F.text == "????? Íàøè óñëóãè")
+@dp.message(F.text == "????? ÃÃ Ã¸Ã¨ Ã³Ã±Ã«Ã³Ã£Ã¨")
 async def services(message: Message):
 
     await message.answer("""
-?? ÓÑÒÀÍÎÂÊÀ ÊÎÍÄÈÖÈÎÍÅĞÎÂ
-?? ĞÅÌÎÍÒ ËŞÁÎÉ ÑËÎÆÍÎÑÒÈ
-?? ÏĞÎÔÅÑÑÈÎÍÀËÜÍÀß ×ÈÑÒÊÀ
-?? ÇÀÏĞÀÂÊÀ ÔĞÅÎÍÎÌ
-?? ÄÈÀÃÍÎÑÒÈÊÀ ÍÅÈÑÏĞÀÂÍÎÑÒÅÉ
-?? ÄÅÌÎÍÒÀÆ È ÏÅĞÅÍÎÑ
-?? ÎÁÑËÓÆÈÂÀÍÈÅ ÊÂÀĞÒÈĞ È ÎÔÈÑÎÂ
-?? ÁÛÑÒĞÛÉ ÂÛÅÇÄ ÏÎ ÒÀØÊÅÍÒÓ
+?? Ã“Ã‘Ã’Ã€ÃÃÃ‚ÃŠÃ€ ÃŠÃÃÃ„ÃˆÃ–ÃˆÃÃÃ…ÃÃÃ‚
+?? ÃÃ…ÃŒÃÃÃ’ Ã‹ÃÃÃÃ‰ Ã‘Ã‹ÃÃ†ÃÃÃ‘Ã’Ãˆ
+?? ÃÃÃÃ”Ã…Ã‘Ã‘ÃˆÃÃÃ€Ã‹ÃœÃÃ€ÃŸ Ã—ÃˆÃ‘Ã’ÃŠÃ€
+?? Ã‡Ã€ÃÃÃ€Ã‚ÃŠÃ€ Ã”ÃÃ…ÃÃÃÃŒ
+?? Ã„ÃˆÃ€ÃƒÃÃÃ‘Ã’ÃˆÃŠÃ€ ÃÃ…ÃˆÃ‘ÃÃÃ€Ã‚ÃÃÃ‘Ã’Ã…Ã‰
+?? Ã„Ã…ÃŒÃÃÃ’Ã€Ã† Ãˆ ÃÃ…ÃÃ…ÃÃÃ‘
+?? ÃÃÃ‘Ã‹Ã“Ã†ÃˆÃ‚Ã€ÃÃˆÃ… ÃŠÃ‚Ã€ÃÃ’ÃˆÃ Ãˆ ÃÃ”ÃˆÃ‘ÃÃ‚
+?? ÃÃ›Ã‘Ã’ÃÃ›Ã‰ Ã‚Ã›Ã…Ã‡Ã„ ÃÃ Ã’Ã€Ã˜ÃŠÃ…ÃÃ’Ã“
 """)
 
 
 # =========================
-# ?? ÂÛÅÇÄ ÌÀÑÒÅĞÀ
+# ?? Ã‚Ã›Ã…Ã‡Ã„ ÃŒÃ€Ã‘Ã’Ã…ÃÃ€
 # =========================
-@dp.message(F.text == "?? Âûåçä ìàñòåğà")
+@dp.message(F.text == "?? Ã‚Ã»Ã¥Ã§Ã¤ Ã¬Ã Ã±Ã²Ã¥Ã°Ã ")
 async def master_visit(message: Message):
 
     user_state[message.from_user.id] = "waiting_contact"
 
     kb = ReplyKeyboardMarkup(
         keyboard=[
-            [KeyboardButton(text="?? Îòïğàâèòü íîìåğ", request_contact=True)],
-            [KeyboardButton(text="?? Îòïğàâèòü ãåîëîêàöèş", request_location=True)],
-            [KeyboardButton(text="?? Â ìåíş")]
+            [KeyboardButton(text="?? ÃÃ²Ã¯Ã°Ã Ã¢Ã¨Ã²Ã¼ Ã­Ã®Ã¬Ã¥Ã°", request_contact=True)],
+            [KeyboardButton(text="?? ÃÃ²Ã¯Ã°Ã Ã¢Ã¨Ã²Ã¼ Ã£Ã¥Ã®Ã«Ã®ÃªÃ Ã¶Ã¨Ã¾", request_location=True)],
+            [KeyboardButton(text="?? Ã‚ Ã¬Ã¥Ã­Ã¾")]
         ],
         resize_keyboard=True
     )
 
     await message.answer(
-        "?? ÂÛÅÇÄ ÌÀÑÒÅĞÀ\n\nÑíà÷àëà îòïğàâüòå íîìåğ > ïîòîì ãåîëîêàöèş",
+        "?? Ã‚Ã›Ã…Ã‡Ã„ ÃŒÃ€Ã‘Ã’Ã…ÃÃ€\n\nÃ‘Ã­Ã Ã·Ã Ã«Ã  Ã®Ã²Ã¯Ã°Ã Ã¢Ã¼Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° > Ã¯Ã®Ã²Ã®Ã¬ Ã£Ã¥Ã®Ã«Ã®ÃªÃ Ã¶Ã¨Ã¾",
         reply_markup=kb
     )
 
 
 # =========================
-# ?? ÊÎÍÒÀÊÒ
+# ?? ÃŠÃÃÃ’Ã€ÃŠÃ’
 # =========================
 @dp.message(F.contact)
 async def contact(message: Message):
@@ -150,7 +150,7 @@ async def contact(message: Message):
     await bot.send_message(
         ADMIN_ID,
         f"""
-?? ÍÎÂÀß ÇÀßÂÊÀ
+?? ÃÃÃ‚Ã€ÃŸ Ã‡Ã€ÃŸÃ‚ÃŠÃ€
 
 ?? {message.from_user.full_name}
 ?? {message.contact.phone_number}
@@ -158,13 +158,13 @@ async def contact(message: Message):
     )
 
     await message.answer(
-        "? Íîìåğ ïğèíÿò!\nÒåïåğü îòïğàâüòå ãåîëîêàöèş ??",
+        "? ÃÃ®Ã¬Ã¥Ã° Ã¯Ã°Ã¨Ã­Ã¿Ã²!\nÃ’Ã¥Ã¯Ã¥Ã°Ã¼ Ã®Ã²Ã¯Ã°Ã Ã¢Ã¼Ã²Ã¥ Ã£Ã¥Ã®Ã«Ã®ÃªÃ Ã¶Ã¨Ã¾ ??",
         reply_markup=ReplyKeyboardRemove()
     )
 
 
 # =========================
-# ?? ÃÅÎËÎÊÀÖÈß
+# ?? ÃƒÃ…ÃÃ‹ÃÃŠÃ€Ã–ÃˆÃŸ
 # =========================
 @dp.message(F.location)
 async def location(message: Message):
@@ -181,7 +181,7 @@ async def location(message: Message):
     await bot.send_message(
         ADMIN_ID,
         f"""
-?? ÃÅÎËÎÊÀÖÈß
+?? ÃƒÃ…ÃÃ‹ÃÃŠÃ€Ã–ÃˆÃŸ
 
 ?? {message.from_user.full_name}
 ?? {loc.latitude}, {loc.longitude}
@@ -191,46 +191,46 @@ https://www.google.com/maps?q={loc.latitude},{loc.longitude}
     )
 
     await message.answer(
-        "? Çàÿâêà îòïğàâëåíà!",
+        "? Ã‡Ã Ã¿Ã¢ÃªÃ  Ã®Ã²Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­Ã !",
         reply_markup=main_menu
     )
 
 
 # =========================
-# ?? ÇÀÊÀÇ ĞÅÌÎÍÒÀ (ÏĞÎÁËÅÌÛ)
+# ?? Ã‡Ã€ÃŠÃ€Ã‡ ÃÃ…ÃŒÃÃÃ’Ã€ (ÃÃÃÃÃ‹Ã…ÃŒÃ›)
 # =========================
-@dp.message(F.text == "?? Çàêàçàòü ğåìîíò")
+@dp.message(F.text == "?? Ã‡Ã ÃªÃ Ã§Ã Ã²Ã¼ Ã°Ã¥Ã¬Ã®Ã­Ã²")
 async def order(message: Message):
 
     user_state[message.from_user.id] = "waiting_problem"
 
     await message.answer("""
-?? ÎÏÈØÈÒÅ ÏĞÎÁËÅÌÓ:
+?? ÃÃÃˆÃ˜ÃˆÃ’Ã… ÃÃÃÃÃ‹Ã…ÃŒÃ“:
 
-?? Íå õîëîäèò
-?? Øóìèò
-?? Òå÷¸ò âîäà
-?? Íå âêëş÷àåòñÿ
-?? Âûáèâàåò àâòîìàò
-?? Ñëàáûé ïîòîê âîçäóõà
+?? ÃÃ¥ ÃµÃ®Ã«Ã®Ã¤Ã¨Ã²
+?? Ã˜Ã³Ã¬Ã¨Ã²
+?? Ã’Ã¥Ã·Â¸Ã² Ã¢Ã®Ã¤Ã 
+?? ÃÃ¥ Ã¢ÃªÃ«Ã¾Ã·Ã Ã¥Ã²Ã±Ã¿
+?? Ã‚Ã»Ã¡Ã¨Ã¢Ã Ã¥Ã² Ã Ã¢Ã²Ã®Ã¬Ã Ã²
+?? Ã‘Ã«Ã Ã¡Ã»Ã© Ã¯Ã®Ã²Ã®Ãª Ã¢Ã®Ã§Ã¤Ã³ÃµÃ 
 
-?? Èëè îïèøèòå ñâîèìè ñëîâàìè
+?? ÃˆÃ«Ã¨ Ã®Ã¯Ã¨Ã¸Ã¨Ã²Ã¥ Ã±Ã¢Ã®Ã¨Ã¬Ã¨ Ã±Ã«Ã®Ã¢Ã Ã¬Ã¨
 """)
 
 
 # =========================
-# ?? ÏÎÄÄÅĞÆÊÀ
+# ?? ÃÃÃ„Ã„Ã…ÃÃ†ÃŠÃ€
 # =========================
-@dp.message(F.text == "?? Ïîääåğæêà")
+@dp.message(F.text == "?? ÃÃ®Ã¤Ã¤Ã¥Ã°Ã¦ÃªÃ ")
 async def support(message: Message):
 
     user_state[message.from_user.id] = "support"
 
-    await message.answer("?? Íàïèøèòå âàø âîïğîñ:")
+    await message.answer("?? ÃÃ Ã¯Ã¨Ã¸Ã¨Ã²Ã¥ Ã¢Ã Ã¸ Ã¢Ã®Ã¯Ã°Ã®Ã±:")
 
 
 # =========================
-# ?? ÃËÀÂÍÛÉ ĞÎÓÒÅĞ
+# ?? ÃƒÃ‹Ã€Ã‚ÃÃ›Ã‰ ÃÃÃ“Ã’Ã…Ã
 # =========================
 @dp.message()
 async def router(message: Message):
@@ -239,7 +239,7 @@ async def router(message: Message):
     state = user_state.get(uid)
 
     # -------------------------
-    # ÀÄÌÈÍ ÎÒÂÅÒ
+    # Ã€Ã„ÃŒÃˆÃ ÃÃ’Ã‚Ã…Ã’
     # -------------------------
     if uid == ADMIN_ID:
 
@@ -248,16 +248,16 @@ async def router(message: Message):
         if target:
             await bot.send_message(
                 target,
-                f"?? Îòâåò ìàñòåğà:\n\n{message.text}"
+                f"?? ÃÃ²Ã¢Ã¥Ã² Ã¬Ã Ã±Ã²Ã¥Ã°Ã :\n\n{message.text}"
             )
-            await message.answer("? Îòâåò îòïğàâëåí êëèåíòó")
+            await message.answer("? ÃÃ²Ã¢Ã¥Ã² Ã®Ã²Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­ ÃªÃ«Ã¨Ã¥Ã­Ã²Ã³")
         else:
-            await message.answer("? Ñíà÷àëà íàæìè «Îòâåòèòü»")
+            await message.answer("? Ã‘Ã­Ã Ã·Ã Ã«Ã  Ã­Ã Ã¦Ã¬Ã¨ Â«ÃÃ²Ã¢Ã¥Ã²Ã¨Ã²Ã¼Â»")
         return
 
 
     # -------------------------
-    # ĞÅÌÎÍÒ
+    # ÃÃ…ÃŒÃÃÃ’
     # -------------------------
     if state == "waiting_problem":
 
@@ -266,19 +266,19 @@ async def router(message: Message):
         await bot.send_message(
             ADMIN_ID,
             f"""
-?? ĞÅÌÎÍÒ
+?? ÃÃ…ÃŒÃÃÃ’
 
 ?? {message.from_user.full_name}
 ?? {message.text}
 """
         )
 
-        await message.answer("? Çàÿâêà îòïğàâëåíà", reply_markup=main_menu)
+        await message.answer("? Ã‡Ã Ã¿Ã¢ÃªÃ  Ã®Ã²Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­Ã ", reply_markup=main_menu)
         return
 
 
     # -------------------------
-    # ÏÎÄÄÅĞÆÊÀ
+    # ÃÃÃ„Ã„Ã…ÃÃ†ÃŠÃ€
     # -------------------------
     if state == "support":
 
@@ -287,7 +287,7 @@ async def router(message: Message):
         sent = await bot.send_message(
             ADMIN_ID,
             f"""
-?? ÏÎÄÄÅĞÆÊÀ
+?? ÃÃÃ„Ã„Ã…ÃÃ†ÃŠÃ€
 
 ?? {message.from_user.full_name}
 ?? {uid}
@@ -298,7 +298,7 @@ async def router(message: Message):
 
         kb = InlineKeyboardMarkup(
             inline_keyboard=[
-                [InlineKeyboardButton(text="?? Îòâåòèòü", callback_data=f"reply_{uid}")]
+                [InlineKeyboardButton(text="?? ÃÃ²Ã¢Ã¥Ã²Ã¨Ã²Ã¼", callback_data=f"reply_{uid}")]
             ]
         )
 
@@ -308,21 +308,21 @@ async def router(message: Message):
             reply_markup=kb
         )
 
-        await message.answer("? Îòïğàâëåíî â ïîääåğæêó", reply_markup=main_menu)
+        await message.answer("? ÃÃ²Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­Ã® Ã¢ Ã¯Ã®Ã¤Ã¤Ã¥Ã°Ã¦ÃªÃ³", reply_markup=main_menu)
         return
 
 
     # -------------------------
-    # ÌÅÍŞ
+    # ÃŒÃ…ÃÃ
     # -------------------------
-    if message.text == "?? Â ìåíş":
+    if message.text == "?? Ã‚ Ã¬Ã¥Ã­Ã¾":
         user_state.pop(uid, None)
-        await message.answer("?? Ãëàâíîå ìåíş", reply_markup=main_menu)
+        await message.answer("?? ÃƒÃ«Ã Ã¢Ã­Ã®Ã¥ Ã¬Ã¥Ã­Ã¾", reply_markup=main_menu)
         return
 
 
 # =========================
-# ?? ÊÍÎÏÊÀ ÎÒÂÅÒÈÒÜ
+# ?? ÃŠÃÃÃÃŠÃ€ ÃÃ’Ã‚Ã…Ã’ÃˆÃ’Ãœ
 # =========================
 @dp.callback_query(F.data.startswith("reply_"))
 async def reply(call: CallbackQuery):
@@ -331,12 +331,12 @@ async def reply(call: CallbackQuery):
 
     admin_reply_state[call.from_user.id] = uid
 
-    await call.message.answer("?? Íàïèøèòå îòâåò êëèåíòó")
+    await call.message.answer("?? ÃÃ Ã¯Ã¨Ã¸Ã¨Ã²Ã¥ Ã®Ã²Ã¢Ã¥Ã² ÃªÃ«Ã¨Ã¥Ã­Ã²Ã³")
     await call.answer()
 
 
 # =========================
-# ?? ÇÀÏÓÑÊ
+# ?? Ã‡Ã€ÃÃ“Ã‘ÃŠ
 # =========================
 async def main():
     print("Bot started...")
